@@ -18,8 +18,8 @@ import Logo from '@/components/Logo.vue'
 import Landing from '@/components/Landing.vue'
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
-import Socials from '@/components/socials.vue'
-import Nav from '@/components/nav.vue'
+import Socials from '@/components/Socials.vue'
+import Nav from '@/components/Nav.vue'
 
 
 
