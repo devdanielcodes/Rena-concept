@@ -10,7 +10,7 @@
         </div>
         <div class="image">
             <div class="top"></div>
-            <img src="../assets/homeimg.svg" alt="" srcset="">
+            <img src="../assets/homeing.png" alt="" srcset="">
             <div class="bottom"></div>
         </div>
     </div>
