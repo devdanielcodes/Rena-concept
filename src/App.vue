@@ -1,26 +1,64 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <v-nav />
+    <v-land />
+    <v-about />
+    <v-contact />
+    <div class="socials">
+      <div class="line"></div>
+      <img src="./assets//instagram.svg" alt="">
+      <img src="./assets//twitter.svg" alt="">
+      <img src="./assets//linkedin.svg" alt="">
+    </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import Nav from '@/components/Nav.vue'
+import Landing from '@/components/Landing.vue'
+import About from '@/components/About.vue'
+import Contact from '@/components/Contact.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default{
+    components: {
+      'v-nav': Nav ,
+      'v-land': Landing ,
+      'v-about': About ,
+      'v-contact': Contact 
+
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+*, html{
+  font-family: 'montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: black;
+  color: white;
+}
+.socials{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 150px;
+  justify-content: space-between
+}
+.socials .line{
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+  background: white;
+}
+.socials img{
+  margin-right: 10px;;
+  cursor: pointer;
 }
 </style>
