@@ -7,16 +7,19 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
-onMounted(() => {
-  gsap.from('.line', 1, {
-          width: 0,
-  })
-})
-
+export default {
+  setup () {
+    onMounted(() => {
+      gsap.from('.line', 1, {
+              width: 0,
+      })
+    })
+  }
+}
 
 </script>
 

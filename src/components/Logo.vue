@@ -3,17 +3,19 @@
         <h1 class="fin">Rena.</h1>
     </div>
 </template>
-<script setup>
+<script>
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
-
-
-onMounted(() => {
-    gsap.from('.fin ', 2, {
-        ease: 'expo',
-        transform: 'translateY(200%)'
-    })
-})
+export default {
+    setup () {
+        onMounted(() => {
+            gsap.from('.fin ', 2, {
+                ease: 'expo',
+                transform: 'translateY(200%)'
+            })
+        })
+    }
+}
 </script>
 
 

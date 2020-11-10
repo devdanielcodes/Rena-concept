@@ -16,28 +16,35 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
+    export default{
+        setup() {
+            onMounted(() => {
+                const tl = gsap.timeline()
 
-const tl = gsap.timeline()
+                tl.from('.shop_cloth h1', 1, {
+                    transform: "translateY(300%)",
+                    ease: 'expo'
+                })
+                tl.from('.top, .bottom', 1, {
+                    height: '0px',
+                    ease: 'expo'
+                },"-=1")
+                tl.from('.image img', 2, {
+                    height: 0,
+                    transformOrigin: 'bottom',
+                    ease: 'expo',
+                    width: '500px'
+                })
+            })
+        }
+    }
 
-onMounted(() => {
-    tl.from('.shop_cloth h1', 1, {
-        transform: "translateY(300%)",
-        ease: 'expo'
-    })
-    gsap.from('.top, .bottom', 1, {
-        height: '0px',
-        ease: 'expo'
-    })
-    gsap.from('.image img', 2, {
-        height: 0,
-        transformOrigin: 'bottom',
-        ease: 'expo',
-        width: '900px'
-    })
-})
+
+
+
 
 </script>
 
