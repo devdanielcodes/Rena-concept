@@ -25,5 +25,6 @@ export default {
     top: 20px;
     left: 40px;
     overflow: hidden;
+    z-index: 10;
 }
 </style>

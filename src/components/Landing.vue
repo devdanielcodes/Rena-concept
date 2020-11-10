@@ -90,21 +90,23 @@ import { gsap } from 'gsap'
     transform: translate(-50%, -50%);
 }
 .image .top{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 20%;
     width: 350px;
+    z-index: 1;
     background: #FFFFFF;
 }
 .image .bottom{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 20%;
     width: 350px;
+    z-index: 1;
     background: #FFED49;
 }
 @media (max-width: 1706px){
@@ -118,7 +120,6 @@ import { gsap } from 'gsap'
         position: relative;
     }
     .image .top, .image .bottom{
-        width: 85%;
     }
 
 }
