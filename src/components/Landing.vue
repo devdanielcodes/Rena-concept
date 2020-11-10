@@ -72,4 +72,46 @@
     width: 350px;
     background: #FFED49;
 }
+@media (max-width: 1323px){
+    
+    .shop_cloth h1:nth-child(2){
+        align-self: flex-start;
+    }
+}
+@media (max-width: 1272px){
+    .land{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 80vh;
+        padding: 0;
+        margin: auto;
+        margin-top: 20vh;
+    }
+    .shop_cloth{
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .image{
+        width: 80%;
+        height: 100%;
+    }
+    .image .top{
+        display: none;
+    }
+    .image .bottom{
+        display: none;
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+    }
+    .shop_cloth h1:nth-child(2){
+        align-self: center;
+    }
+}
 </style>
