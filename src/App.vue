@@ -5,7 +5,6 @@ p<template>
     <v-land />
     <v-about />
     <v-contact />
-    <v-soc />
     <v-nav />
   </div>
 </template>
@@ -18,7 +17,6 @@ import Logo from './components/Logo.vue'
 import Landing from './components/Landing.vue'
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
-import Socials from './components/Socials.vue'
 import Nav from './components/Nav.vue'
 
 
@@ -30,7 +28,6 @@ import Nav from './components/Nav.vue'
       'v-land': Landing ,
       'v-about': About ,
       'v-contact': Contact,
-      'v-soc': Socials,
       'v-nav': Nav
 
     },
