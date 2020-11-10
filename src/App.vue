@@ -4,6 +4,7 @@
     <v-land />
     <v-about />
     <v-contact />
+    <v-soc />
   </div>
 </template>
 
@@ -12,13 +13,16 @@ import Nav from '@/components/Nav.vue'
 import Landing from '@/components/Landing.vue'
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
+import Socials from '@/components/socials.vue'
+
 
   export default{
     components: {
       'v-nav': Nav ,
       'v-land': Landing ,
       'v-about': About ,
-      'v-contact': Contact 
+      'v-contact': Contact,
+      'v-soc': Socials,
 
     }
   }
