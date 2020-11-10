@@ -8,6 +8,15 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+
+onMounted(() => {
+  gsap.from('.line', 1, {
+          width: 0,
+  })
+})
+
 
 </script>
 
