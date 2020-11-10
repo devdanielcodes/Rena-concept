@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <v-nav />
+    <v-logo />
     <v-land />
     <v-about />
     <v-contact />
@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import Nav from '@/components/Nav.vue'
+import Logo from '@/components/Logo.vue'
 import Landing from '@/components/Landing.vue'
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
@@ -18,7 +18,7 @@ import Socials from '@/components/socials.vue'
 
   export default{
     components: {
-      'v-nav': Nav ,
+      'v-logo': Logo ,
       'v-land': Landing ,
       'v-about': About ,
       'v-contact': Contact,
