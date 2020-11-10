@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <img src="./assets/bg.svg" alt="" class="bg">
     <v-logo />
     <v-land />
     <v-about />
@@ -43,5 +44,10 @@ body{
   background: black;
   color: white;
 }
-
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+}
 </style>
