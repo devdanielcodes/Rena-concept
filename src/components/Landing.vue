@@ -4,7 +4,7 @@
             <div class="em">
                 <h1>SHOP</h1>
             </div>
-            <div class="em">
+            <div class="em clon">
                 <h1>CLOTHING.</h1>
             </div>
         </div>
@@ -31,10 +31,11 @@ onMounted(() => {
         height: '0px',
         ease: 'expo'
     })
-    gsap.from('.image img', 1, {
+    gsap.from('.image img', 2, {
         height: 0,
         transformOrigin: 'bottom',
-        ease: 'expo'
+        ease: 'expo',
+        width: '900px'
     })
 })
 
@@ -56,12 +57,12 @@ onMounted(() => {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    width: 35%;
-    font-size: 45px;
+    width: 45%;
+    font-size: 55px;
     margin-right: 100px;
 }
-.shop_cloth h1:nth-child(2){
-    align-self: flex-end
+.shop_cloth .clon{
+    align-self: flex-end;
 }
 .shop_cloth h1{
     font-weight: 400;
@@ -101,11 +102,23 @@ onMounted(() => {
 }
 @media (max-width: 1706px){
     
-    .shop_cloth h1:nth-child(2){
-        align-self: flex-start;
+    .shop_cloth .clon{
     }
+    .shop_cloth{
+        font-size: 40px;
+    }
+    .image{
+        width: 350px;
+        justify-self: flex-start;
+        height: 100%;
+        position: relative;
+    }
+    .image .top, .image .bottom{
+        width: 85%;
+    }
+
 }
-@media (max-width: 1526px){
+@media (max-width: 1222px){
     .land{
         flex-direction: column;
         align-items: center;
@@ -137,7 +150,7 @@ onMounted(() => {
         width: 100%;
         height: 100%;
     }
-    .shop_cloth h1:nth-child(2){
+    .shop_cloth .clon{
         align-self: center;
     }
 }

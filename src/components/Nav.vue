@@ -28,7 +28,7 @@
     width: 60px
 }
 .nav_link{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     width: 100%;
     position: relative;
     cursor: pointer;
