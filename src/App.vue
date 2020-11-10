@@ -10,13 +10,18 @@
   </div>
 </template>
 
-<script setup>
+<script>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+
 import Logo from '@/components/Logo.vue'
 import Landing from '@/components/Landing.vue'
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
 import Socials from '@/components/socials.vue'
 import Nav from '@/components/nav.vue'
+
+
 
 
   export default{
@@ -28,6 +33,14 @@ import Nav from '@/components/nav.vue'
       'v-soc': Socials,
       'v-nav': Nav
 
+    },
+    setup(){
+      onMounted(() => {
+          gsap.from('.bg', 1, {
+                transform: 'translateX(-100%)',
+                ease: 'expo'
+            })
+        })
     }
   }
 </script>
