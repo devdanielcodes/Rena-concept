@@ -89,7 +89,7 @@
         margin-top: 20vh;
     }
     .shop_cloth{
-        font-size: 30px;
+        font-size: 25px;
         justify-content: center;
         align-items: center;
         width: 100%;
