@@ -15,10 +15,6 @@
     </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
 .nav{
     position: fixed;
