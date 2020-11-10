@@ -4,12 +4,6 @@
     <v-land />
     <v-about />
     <v-contact />
-    <div class="socials">
-      <div class="line"></div>
-      <img src="./assets//instagram.svg" alt="">
-      <img src="./assets//twitter.svg" alt="">
-      <img src="./assets//linkedin.svg" alt="">
-    </div>
   </div>
 </template>
 
@@ -42,23 +36,5 @@ body{
   background: black;
   color: white;
 }
-.socials{
-  display: flex;
-  align-items: center;
-  position: fixed;
-  bottom: 40px;
-  left: 0;
-  width: 150px;
-  justify-content: space-between
-}
-.socials .line{
-  width: 60px;
-  height: 3px;
-  margin-right: 10px;
-  background: white;
-}
-.socials img{
-  margin-right: 10px;;
-  cursor: pointer;
-}
+
 </style>
