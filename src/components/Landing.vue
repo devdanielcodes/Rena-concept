@@ -101,9 +101,6 @@ onMounted(() => {
     background: #FFED49;
 }
 @media (max-width: 1706px){
-    
-    .shop_cloth .clon{
-    }
     .shop_cloth{
         font-size: 40px;
     }
