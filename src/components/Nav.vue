@@ -7,11 +7,7 @@
 <style scoped>
 .logo{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: auto;
-    height: 10vh;
-    padding: 10px 5%;
+    top: 20px;
+    left: 40px;
 }
 </style>
