@@ -29,7 +29,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    width: 45%;
+    width: 35%;
     font-size: 45px;
     margin-right: 100px;
 }
@@ -40,7 +40,7 @@
     font-weight: 400;
 }
 .image{
-    width: 450px;
+    width: 600px;
     justify-self: flex-start;
     height: 100%;
     position: relative;
@@ -72,13 +72,13 @@
     width: 350px;
     background: #FFED49;
 }
-@media (max-width: 1323px){
+@media (max-width: 1706px){
     
     .shop_cloth h1:nth-child(2){
         align-self: flex-start;
     }
 }
-@media (max-width: 1272px){
+@media (max-width: 1526px){
     .land{
         flex-direction: column;
         align-items: center;
