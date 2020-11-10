@@ -1,8 +1,12 @@
 <template>
     <div class="land">
         <div class="shop_cloth">
-            <h1>SHOP</h1>
-            <h1>CLOTHING.</h1>
+            <div class="em">
+                <h1>SHOP</h1>
+            </div>
+            <div class="em">
+                <h1>CLOTHING.</h1>
+            </div>
         </div>
         <div class="image">
             <div class="top"></div>
@@ -13,10 +17,33 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+
+const tl = gsap.timeline()
+
+onMounted(() => {
+    tl.from('.shop_cloth h1', 1, {
+        transform: "translateY(300%)",
+        ease: 'expo'
+    })
+    gsap.from('.top, .bottom', 1, {
+        height: '0px',
+        ease: 'expo'
+    })
+    gsap.from('.image img', 1, {
+        height: 0,
+        transformOrigin: 'bottom',
+        ease: 'expo'
+    })
+})
 
 </script>
 
 <style scoped>
+.em{
+    overflow: hidden;
+}
 .land{
     display: flex;
     align-items: center;
