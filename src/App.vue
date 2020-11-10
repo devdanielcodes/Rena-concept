@@ -1,4 +1,4 @@
-<template>
+p<template>
   <div class="main">
     <img src="./assets/bg.svg" alt="" class="bg">
     <v-logo />
@@ -14,12 +14,12 @@
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
-import Logo from '@/components/Logo.vue'
-import Landing from '@/components/Landing.vue'
-import About from '@/components/About.vue'
-import Contact from '@/components/Contact.vue'
-import Socials from '@/components/Socials.vue'
-import Nav from '@/components/Nav.vue'
+import Logo from './components/Logo.vue'
+import Landing from './components/Landing.vue'
+import About from './components/About.vue'
+import Contact from './components/Contact.vue'
+import Socials from './components/Socials.vue'
+import Nav from './components/Nav.vue'
 
 
 
