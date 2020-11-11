@@ -1,22 +1,52 @@
 <template>
     <div class="about">
-        <h1>ABOUT.</h1>
-        <p>We at Rena make sure you get the best quality and stunning clothing that will make you feel like a celeb .</p>
+        <div class="em">
+            <h1>ABOUT.</h1>
+        </div>
+        <div class="em">
+            <p>We at Rena make sure you get the best quality and stunning clothing that will make you feel like a celeb.</p>
+        </div>   
     </div>
 </template>
 
 <script>
-//import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.min.js"
+import { onMounted } from 'vue'
+
 
 export default {
     setup () {
         
+
+        onMounted(() => {
+            gsap.registerPlugin(ScrollTrigger)
+
+
+            gsap
+            .from('.about h1, .about p', 1, {
+                opacity: 0,
+                y: '200%',
+                ease: 'expo',
+                scrollTrigger:{
+                    trigger: '.about',
+                    start: 'top center',
+                } 
+            })
+        })
+
+
     }
 }
 
 </script>
 
 <style scoped>
+.em{
+    overflow: hidden;
+    width: 50%;
+
+}
 .about{
     height: 100vh;
     display: flex;
@@ -29,18 +59,16 @@ export default {
 .about h1{
     font-size: 100px;
     font-weight: 400;
-    width: 50%;
 }
 .about p{
     font-size: 30px;
-    width: 50%;
 
 }
 @media (max-width: 1070px) {
     .about{
         flex-direction: column
     }
-    .about h1,.about p{
+    .about .em,.about p{
         width: 90%;
     }
 }

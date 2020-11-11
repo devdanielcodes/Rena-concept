@@ -1,4 +1,4 @@
-p<template>
+<template>
   <div class="main">
     <img src="./assets/bg.svg" alt="" class="bg">
     <v-logo />
