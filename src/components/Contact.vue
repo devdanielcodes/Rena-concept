@@ -3,43 +3,72 @@
         <div class="con">
             <h1>Contact.</h1>
             <form>
-                <label for="">Name</label>
+                <label class="label" for="">Name</label>
                 <input type="text">
-                <label for="">Email</label>
+                <label class="label" for="">Email</label>
                 <input type="mail">
-                <label for="">Msg</label>
+                <label class="label" for="">Msg</label>
                 <input type="text">
                 <button>Send</button>
             </form>
         </div>
-        <img src="../assets/cont.png" alt="" class="cont">
+        <div class="em">
+            <img src="../assets/cont.png" alt="" class="contimg">
+        </div>
     </div>
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.min.js"
+import { onMounted } from 'vue'
+
+
+export default {
+    setup () {
+        
+
+        onMounted(() => {
+            gsap.registerPlugin(ScrollTrigger)
+
+
+            gsap
+            .from('.contimg', 2, {
+                y: '100%',
+                ease: 'expo',
+                scrollTrigger:{
+                    trigger: '.contact',
+                    toggleActions: 'restart',   
+                    start: 'top center'
+                } 
+            })
+        })
+
+
+    }
+}
 
 </script>
 
 <style scoped>
+
 .contact{
     height: 100vh;
     width: 90%;
     margin: auto;
-    position: relative
+    position: relative;
 }
 .contact h1{
     font-size: 100px;
+    padding: 50px 0;
     font-weight: 400;
-}
-.con{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-60%);
-    width: 100%;
 }
 form{
     width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
 }
 form input{
     width: 100%;
@@ -60,20 +89,27 @@ button{
     color: white;
     outline: none;
 }
-.cont{
+.em{
+    overflow: hidden;
     position: absolute;
     top: 50%;
     right: 10%;
     width: 500px;
+    height: 40vh;
     transform: translateY(-50%);
 }
+.contimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media (max-width: 1400px){
-    .cont{
+    .em{
         width: 300px
     }  
 }
 @media (max-width: 960px){
-    .cont{
+    .em{
         display: none
     }
 }
