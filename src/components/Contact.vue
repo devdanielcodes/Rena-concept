@@ -60,7 +60,7 @@ export default {
 }
 .contact h1{
     font-size: 100px;
-    padding: 50px 0;
+    padding: 60px 0;
     font-weight: 400;
 }
 form{
