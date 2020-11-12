@@ -30,6 +30,7 @@ export default {
                 ease: 'expo',
                 scrollTrigger:{
                     trigger: '.about',
+                    toggleActions: 'restart',   
                     start: 'top center',
                 } 
             })
