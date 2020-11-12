@@ -2,19 +2,19 @@
 <div>
     <div class="nav">
       <div class="link">
-        <a href="#top" class="nav_link active">
+        <a href="#top" @click="about = false, contact = false, top = true" class="nav_link" :class="{active: top}">
             <p>Top</p>
             <div class="nav_link_line "></div>
         </a>
       </div>  
         <div class="link">
-        <a href="#about" class="nav_link">
+        <a href="#about" @click="top = false, contact = false, about = true" class="nav_link" :class="{active: about}">
             <p>About</p>
             <div class="nav_link_line "></div>
         </a>
       </div>
         <div class="link">
-        <a href="#contact" class="nav_link">
+        <a href="#contact" @click="top = false, about = false, contact =  true" class="nav_link" :class="{active: contact}">
             <p>Contact</p>
             <div class="nav_link_line "></div>
         </a>
@@ -30,7 +30,7 @@
 
 </template>
 <script>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 
 export default {
@@ -40,6 +40,15 @@ export default {
               width: 0,
       })
     })
+    const top =  ref(true)
+    const about =  ref(false)
+    const contact =  ref(false)
+
+    return{
+      top,
+      about,
+      contact
+    }
   }
 }
 
@@ -56,14 +65,19 @@ export default {
     width: 100%;
     position: relative;
     cursor: pointer;
-    text-align: right
+    text-align: right;
+    transition: all .3s;
 }
 a{
   color: white;
   text-decoration: none;
+    transition: all .3s;
+
 }
 .link{
     margin-bottom: 35px;
+    transition: all .3s;
+
 }
 .nav_link_line{
     width: 100%;
@@ -71,20 +85,24 @@ a{
     margin-right: 10px;
     justify-self: flex-end;
     background: white;
+    transition: all .3s;
+
 }
 .nav_link p{
     opacity: 0;
     font-size: 15px;
     display: none;
+    transition: all .3s;
+
 }
 .nav_link.active p{
     opacity: 1;
-    display: block;
-   
+    display: block
 
 }
 .nav_link.active .nav_link_line{
     width: 0%;
+
 }
 
 .socials{
