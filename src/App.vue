@@ -2,9 +2,9 @@
   <div class="main">
     <img src="./assets/bg.svg" alt="" class="bg">
     <v-logo />
-    <v-land />
-    <v-about />
-    <v-contact />
+    <v-land id="top" />
+    <v-about id="about" />
+    <v-contact id="contact"/>
     <v-nav />
   </div>
 </template>
@@ -50,9 +50,16 @@ import Nav from './components/Nav.vue'
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   background: black;
   color: white;
+  /*   */
+}
+::-webkit-scrollbar{
+  width: 0;
 }
 .bg{
   position: fixed;

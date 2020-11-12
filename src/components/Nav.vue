@@ -1,18 +1,24 @@
 <template>
 <div>
     <div class="nav">
-        <div class="nav_link active">
+      <div class="link">
+        <a href="#top" class="nav_link active">
             <p>Top</p>
             <div class="nav_link_line "></div>
-        </div>
-        <div class="nav_link">
+        </a>
+      </div>  
+        <div class="link">
+        <a href="#about" class="nav_link">
             <p>About</p>
-            <div class="nav_link_line"></div>
-        </div>
-        <div class="nav_link">
+            <div class="nav_link_line "></div>
+        </a>
+      </div>
+        <div class="link">
+        <a href="#contact" class="nav_link">
             <p>Contact</p>
-            <div class="nav_link_line"></div>
-        </div>
+            <div class="nav_link_line "></div>
+        </a>
+      </div>
     </div>
     <div class="socials">
       <div class="line"></div>
@@ -47,11 +53,17 @@ export default {
     width: 60px
 }
 .nav_link{
-    margin-bottom: 35px;
     width: 100%;
     position: relative;
     cursor: pointer;
     text-align: right
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.link{
+    margin-bottom: 35px;
 }
 .nav_link_line{
     width: 100%;
