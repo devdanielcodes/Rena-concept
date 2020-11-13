@@ -10,7 +10,7 @@
         </div>
         <div class="image">
             <div class="top"></div>
-            <img src="../assets/homeing.png" alt="" srcset="">
+            <img class="mainImg" src="../assets/homeing.png" alt="" srcset="">
             <div class="bottom"></div>
         </div>
     </div>
@@ -118,8 +118,6 @@ import { gsap } from 'gsap'
         justify-self: flex-start;
         height: 100%;
         position: relative;
-    }
-    .image .top, .image .bottom{
     }
 
 }
